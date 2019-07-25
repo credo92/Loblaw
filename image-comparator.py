@@ -5,10 +5,19 @@ from os import path, getcwd, name
 from termcolor import colored
 from colorama import init
 from utils import is_csv_good, start_calculating_score_elapsed
+from subprocess import Popen, PIPE
 
 
 if name == 'nt':
     init()
+
+
+def git_pull():
+    print(colored('Pulling code from git', 'blue'))
+    process = Popen(["git", "pull", "origin", "master"], stdout=PIPE)
+    process.communicate()
+    if process.poll() == 0:
+        print(colored('git pull done... starting calculation of similarity scores...', 'blue'))
 
 
 def init(input_file_name):
@@ -31,6 +40,8 @@ def init(input_file_name):
 
 
 if __name__ == "__main__":
+    git_pull()
+
     if len(sys.argv) <= 1:
         print(colored('ERR! Please enter a path | ex: python image-comparator.py <CSV_FILE_PATH>', 'red'))
     else:
