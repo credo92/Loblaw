@@ -82,6 +82,7 @@
 
   ![Err Messsage](screenshots/err-csv-dump.png "Err Messasge to console if any filepath in csv is incorrect")
   ![calculating-results](screenshots/calculating-results.png "calculating results")
+  ![pytest](screenshots/pytest.png "pytest")
 
   
 
