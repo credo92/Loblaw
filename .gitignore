@@ -8,9 +8,6 @@ ENV/
 #pytest cache
 .pytest_cache
 
-#Tests csv that generated on pytest and errs
--Test*.csv
-
 #results generated
 results.csv
 
