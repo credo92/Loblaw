@@ -9,7 +9,7 @@
 1. pandas to read/write CSV
 2. opencv-python==4.1.0.25 to calculate similarity scores using SIFT metric
 3. pytest for unit-testing
-4. colorama to have colored logs in terminal (dependency for termcolor)
+4. colorama to have colored logs in terminal (dependency for termcolor if os is windows)
 5. termcolor
 
 ## MacOS Instructions to install python / upgrade pip 
@@ -46,14 +46,17 @@
 
 ## Steps to run Project Unit Tests 
 1. Run `pytest` from root folder to see tests
-
+   
+   ![pytest](screenshots/pytest.png "pytest")
+   
 ## Steps taken for designing and implementing the solution
 1. Evaluated options - JavaScript , python then decided on python 
 2. Ease of reading/writing csv using pandas, image-processing using opencv
 3. Calculating runtime of a function call using time module
-4. Researched Best metrics to evaluate Similarity between images by reading [research papers](https://www.cs.ubc.ca/~lowe/papers/ijcv04.pdf), 
-   [springer](https://link.springer.com/chapter/10.1007%2F978-3-662-45498-5_1)
-   narrowed it down to SIFT Score
+4. Researched Best metrics to evaluate Similarity between images by reading [research papers](https://www.cs.ubc.ca/~lowe/papers/ijcv04.pdf), [springer](https://link.springer.com/chapter/10.1007%2F978-3-662-45498-5_1) narrowed it down to SIFT Score
+
+   ![Flowchart](screenshots/flowchart.png "flowchart")
+   
    
 ## How do you know if your code works?
 1. By Adding unit-tests for functions being used
@@ -88,7 +91,3 @@
 
   ![Err Messsage](screenshots/err-csv-dump.png "Err Messasge to console if any filepath in csv is incorrect")
   ![calculating-results](screenshots/calculating-results.png "calculating results")
-  ![pytest](screenshots/pytest.png "pytest")
-
-  
-
