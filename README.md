@@ -30,9 +30,15 @@
 3. tests - unit tests defined for utility functions
 4. utils - functions defined for calculating similarity, elapsed times and checking if csv contains valid file paths
 
+## (Only for Windows) Pre-requisite steps before running project
+1. When installing git if following option has not been set execute step 2 or 3
+   ![run-git-cmd-option](screenshots/run-git-cmd-option.png "run-git-cmd-option")
+2. From command prompt, run `set PATH=%PATH%;"C:\Program Files\Git\cmd"` to add git to current session
+3. if Git installed in another directory then do `set PATH=%PATH%;"DRIVE:\DIRECTORY\Git\cmd"`
+
 
 ## Steps to run project 
-1. Download project or run `git clone https://github.com/credo92/Loblaw.git`
+1. Run `git clone https://github.com/credo92/Loblaw.git` , DONT' DOWNLOAD
 2. Then go to root folder and then run `pip install -r requirements.txt` to install required libraries
 3. From root folder then run `python image-comparator.py <FILEPATH>` to get results, 
 4. `<FILEPATH>` - a csv file on the system that contains  file paths for images that need to be compared
