@@ -20,9 +20,9 @@ def git_pull():
         print(colored('git pull done... starting calculation of similarity scores...', 'blue'))
 
 
-def init(input_file_name):
+def main(input_file_name):
     if not path.exists(input_file_name):
-        print(colored('ERR!! Path doesnt exists : '+input_file_name, 'red'))
+        print(colored('ERR Path doesnt exists : '+input_file_name, 'red'))
         return
 
     output_file_name = getcwd()+'/results.csv'
@@ -36,13 +36,13 @@ def init(input_file_name):
     else:
         err_input_file_name = getcwd() + '/dumps/-Test' + str(int(time.time())) + '.csv'
         images_csv_df.to_csv(err_input_file_name, sep=",", index=False)
-        print(colored("ERRs in CSV! Incorrect File paths labeled in " + err_input_file_name, 'red'))
+        print(colored("ERR in CSV Incorrect File paths labeled in " + err_input_file_name, 'red'))
 
 
 if __name__ == "__main__":
     git_pull()
 
     if len(sys.argv) <= 1:
-        print(colored('ERR! Please enter a path | ex: python image-comparator.py <CSV_FILE_PATH>', 'red'))
+        print(colored('ERR Please enter a path | ex: python image-comparator.py <CSV_FILE_PATH>', 'red'))
     else:
-        init(str(sys.argv[1]))
+        main(str(sys.argv[1]))
